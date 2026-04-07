@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <title>Jangsu Korean Store - Admin Products</title>
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Admin Dashboard</h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <!-- General Section -->
+                <div class="nav-section">
+                    <div class="nav-section-title">General</div>
+                    <!-- Dashboard link -->
+                    <a href="admin-dashboard.html" class="nav-item">Dashboard</a>
+                    <!-- Orders link -->
+                    <a href="admin-order.html" class="nav-item">Orders</a>
+                    <!-- Products link -->
+                    <a href="admin-product.html" class="nav-item"> Products</a>
+                    <!-- Inventory link -->
+                    <a href="admin-inventory.html" class="nav-item">Inventory</a>
+                    <!-- Reports link -->
+                    <a href="admin-report.html" class="nav-item">Reports</a>
+                </div>
+                <!-- Settings Section -->
+                <div class="nav-section">
+                    <a href="admin-setting.html" class="nav-item activ">
+                        <span class="nav-icon">⚙️</span> Settings
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- ===== MAIN PRODUCT CONTENT ===== -->
+        <main class="main-content-product">
+            <!-- Page Header with Welcome Message -->
+            <div class="page-header">
+                <h1 class="page-title">Products</h1>
+                <div class="welcome-message">
+                    <span class="welcome-text">Welcome,</span>
+                    <span class="admin-name">Admin</span>
+                </div>
+            </div>
+            
+            <h2 class="section-title">General</h2>
+            <h3 class="subsection-title">Products</h3>
+            
+            <!-- Products Table Container -->
+            <div class="products-table-container">
+                <div class="table-header">
+                    <div class="table-row header-row">
+                        <div class="table-cell product-image-col">Product Image</div>
+                        <div class="table-cell product-name-col">Product Name</div>
+                        <div class="table-cell category-col">Category</div>
+                        <div class="table-cell price-col">Price</div>
+                        <div class="table-cell stock-col">Current Stock</div>
+                        <div class="table-cell reserved-col">Reserved Stock</div>
+                        <div class="table-cell status-col">Status</div>
+                        <div class="table-cell actions-col">Actions</div>
+                    </div>
+                </div>
+                <div class="table-body" id="productsTableBody">
+                    <!-- Dynamic rows will be injected from JavaScript -->
+                </div>
+            </div>
+            
+            <!-- Add Product Button -->
+            <div class="add-product-container">
+                <a href="add-product.html" class="add-product-btn">
+                    <span class="btn-icon">➕</span> Add Product
+                </a>
+            </div>
+            
+            <!-- Settings link at bottom -->
+            <div class="bottom-settings">
+                <a href="admin-setting.html" class="settings-link">
+                    <span class="settings-icon">⚙️</span> Settings
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <!-- Delete Confirmation Modal (Only modal needed now) -->
+    <div id="deleteModal" class="modal delete-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>⚠️ Delete Product</h3>
+                <button class="close-modal" onclick="window.closeDeleteModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="delete-warning">
+                    <div class="warning-icon">🗑️</div>
+                    <p>Are you sure you want to delete <strong id="deleteProductName" class="product-name"></strong>?</p>
+                    <p style="font-size: 14px; color: #7f8c8d;">This action cannot be undone.</p>
+                </div>
+                <div class="delete-actions">
+                    <button type="button" class="modal-cancel-btn" onclick="window.closeDeleteModal()">Cancel</button>
+                    <button type="button" class="confirm-delete-btn" onclick="window.confirmDelete()">Delete Permanently</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin-system.js"></script>
+</body>
+</html>

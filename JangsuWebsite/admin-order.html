@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <title>Jangsu Korean Store - Admin Orders</title>
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Admin Dashboard</h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <!-- General Section -->
+                <div class="nav-section">
+                    <div class="nav-section-title">General</div>
+                    <!-- Dashboard link -->
+                    <a href="admin-dashboard.html" class="nav-item">Dashboard</a>
+                    <!-- Orders link -->
+                    <a href="admin-order.html" class="nav-item">Orders</a>
+                    <!-- Products link -->
+                    <a href="admin-product.html" class="nav-item"> Products</a>
+                    <!-- Inventory link -->
+                    <a href="admin-inventory.html" class="nav-item">Inventory</a>
+                    <!-- Reports link -->
+                    <a href="admin-report.html" class="nav-item">Reports</a>
+                </div>
+                <!-- Settings Section -->
+                <div class="nav-section">
+                    <a href="admin-setting.html" class="nav-item activ">
+                        <span class="nav-icon">⚙️</span> Settings
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- ===== MAIN CONTENT AREA ===== -->
+        <main class="main-content">
+            <!-- Page Header with Welcome Message -->
+            <div class="page-header">
+                <h1 class="page-title">Orders</h1>
+                <div class="welcome-message">
+                    <span class="welcome-text">Welcome,</span>
+                    <span class="admin-name">Admin</span>
+                </div>
+            </div>
+            
+            <!-- Main Content Area Title -->
+            <h2 class="section-title">General</h2>
+            
+            <!-- Orders Table Section -->
+            <div class="orders-table-container">
+                <!-- Table Header with Column Titles -->
+                <div class="table-header">
+                    <div class="table-row header-row">
+                        <div class="table-cell order-no">OR</div>
+                        <div class="table-cell customer-name">Name</div>
+                        <div class="table-cell order-date">Date</div>
+                        <div class="table-cell payment-method">Payment Method</div>
+                        <div class="table-cell order-status">Status</div>
+                        <div class="table-cell order-details">Details</div>
+                    </div>
+                </div>
+                
+                <!-- Table Body with Order Data -->
+                <div class="table-body">
+                    <!-- Order Row 1 -->
+                    <div class="table-row data-row">
+                        <div class="table-cell order-no">200123</div>
+                        <div class="table-cell customer-name">John Doe</div>
+                        <div class="table-cell order-date">2026-01-01 00:00</div>
+                        <div class="table-cell payment-method">Cash</div>
+                        <div class="table-cell order-status">
+                            <span class="status-badge delivered">Delivered</span>
+                        </div>
+                        <div class="table-cell order-details">
+                            <a href="admin-order-detail.html" class="details-link">Details</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Order Row 2 -->
+                    <div class="table-row data-row">
+                        <div class="table-cell order-no">200124</div>
+                        <div class="table-cell customer-name">Jane Smith</div>
+                        <div class="table-cell order-date">2026-01-02 14:30</div>
+                        <div class="table-cell payment-method">GCash</div>
+                        <div class="table-cell order-status">
+                            <span class="status-badge pending">Pending</span>
+                        </div>
+                        <div class="table-cell order-details">
+                            <a href="admin-order-detail.html" class="details-link">Details</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Order Row 3 -->
+                    <div class="table-row data-row">
+                        <div class="table-cell order-no">200125</div>
+                        <div class="table-cell customer-name">Mike Wilson</div>
+                        <div class="table-cell order-date">2026-01-03 09:45</div>
+                        <div class="table-cell payment-method">Cash</div>
+                        <div class="table-cell order-status">
+                            <span class="status-badge ready">Ready for Pickup</span>
+                        </div>
+                        <div class="table-cell order-details">
+                            <a href="admin-order-detail.html" class="details-link">Details</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Order Row 4 -->
+                    <div class="table-row data-row">
+                        <div class="table-cell order-no">200126</div>
+                        <div class="table-cell customer-name">Sarah Lee</div>
+                        <div class="table-cell order-date">2026-01-04 16:20</div>
+                        <div class="table-cell payment-method">GCash</div>
+                        <div class="table-cell order-status">
+                            <span class="status-badge delivered">Delivered</span>
+                        </div>
+                        <div class="table-cell order-details">
+                            <a href="admin-order-detail.html" class="details-link">Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        </main>
+    </div>
+</body>
+</html>

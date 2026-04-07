@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="user.css">
+    <title>Jangsu Korean Store - Home</title>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="KStore Logo">
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about-us.html">About Us</a>
+        </nav>
+
+        <div class="header-actions">
+            <!-- Cart Icon with Badge -->
+            <div class="cart-icon" id="cart-icon">
+                🛒
+                <span class="cart-badge" id="cart-badge">0</span>
+            </div>
+            
+            <!-- Profile Icon -->
+            <a href="user-profile.html" class="profile-icon-link">
+                <svg class="profile-svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z"/>
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- Shop Now Section -->
+    <section class="shop-now">
+        <img src="images/banner.jpg" alt="Korean Store Banner" class="banner-image">
+        <div class="shopnow-text">
+            <h1>Discover Authentic Korean Goods</h1>
+            <a href="products.html" class="btn">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Category Section with Filter Links -->
+    <section class="categories">
+        <div class="category-card">
+            <h2>Drinks</h2>
+            <img src="images/drinks.jpg" alt="Drinks">
+            <br>
+            <a href="products.html?category=drinks" class="btn-small">View All</a>
+        </div>
+
+        <div class="category-card">
+            <h2>Noodles</h2>
+            <img src="images/noodles.jpg" alt="Noodles">
+            <br>
+            <a href="products.html?category=noodles" class="btn-small">View All</a>
+        </div>
+
+        <div class="category-card">
+            <h2>Snacks</h2>
+            <img src="images/snacks.jpg" alt="Snacks">
+            <br>
+            <a href="products.html?category=snacks" class="btn-small">View All</a>
+        </div>
+    </section>
+
+    <!-- Best Seller Section -->
+    <section class="best-seller-section">
+        <h2>BEST SELLERS</h2>
+        <div class="carousel">
+            <button class="arrow">◀</button>
+            <div class="product-highlight">
+                <img src="images/noodles.jpg" alt="Best Seller">
+                <p>Shin Ramen Bundle</p>
+                <p class="price">₱90.00</p>
+                <button class="btn-small" onclick="addToCartFromProducts(2, 'Shin Ramen Bundle', 90.00, 'images/noodles.jpg')">Add to Cart</button>
+            </div>
+            <button class="arrow">▶</button>
+        </div>
+    </section>
+
+    <!-- Cart Sidebar Component -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Shopping Cart (<span id="cart-count">0</span>)</h2>
+            <button class="close-cart-btn" id="close-cart">×</button>
+        </div>
+        
+        <div class="cart-items-container" id="cart-items-container">
+            <div class="empty-cart" id="empty-cart">
+                <div class="empty-cart-icon">🛒</div>
+                <p>Your cart is empty</p>
+                <p class="empty-cart-hint">Add items to get started</p>
+            </div>
+            <div class="cart-items-list" id="cart-items-list"></div>
+        </div>
+        
+        <div class="cart-footer" id="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-amount" id="cart-total">₱0.00</span>
+            </div>
+            <button class="view-order-btn" id="view-order-btn">View Order</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <a href="#">Contact Us</a>
+        <span class="separator">|</span>
+        <a href="#">Privacy Policy</a>
+        <span class="copyright">© 2026 Jangsu Korean Store</span>
+    </footer>
+
+    <script src="cart-system.js"></script>
+    <script src="user-system.js"></script>
+</body>
+</html>

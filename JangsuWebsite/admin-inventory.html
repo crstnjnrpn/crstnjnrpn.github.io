@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <title>Jangsu Korean Store - Admin Inventory</title>
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Admin Dashboard</h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <!-- General Section -->
+                <div class="nav-section">
+                    <div class="nav-section-title">General</div>
+                    <!-- Dashboard link -->
+                    <a href="admin-dashboard.html" class="nav-item">Dashboard</a>
+                    <!-- Orders link -->
+                    <a href="admin-order.html" class="nav-item">Orders</a>
+                    <!-- Products link -->
+                    <a href="admin-product.html" class="nav-item"> Products</a>
+                    <!-- Inventory link -->
+                    <a href="admin-inventory.html" class="nav-item">Inventory</a>
+                    <!-- Reports link -->
+                    <a href="admin-report.html" class="nav-item">Reports</a>
+                </div>
+                <!-- Settings Section -->
+                <div class="nav-section">
+                    <a href="admin-setting.html" class="nav-item activ">
+                        <span class="nav-icon">⚙️</span> Settings
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- ===== MAIN CONTENT AREA ===== -->
+        <main class="main-content">
+            
+            <!-- Page Header with Welcome Message -->
+            <div class="page-header">
+                <h1 class="page-title">Inventory</h1>
+                <div class="welcome-message">
+                    <span class="welcome-text">Welcome,</span>
+                    <span class="admin-name">Admin</span>
+                </div>
+            </div>
+            
+            <!-- Main Content Area Title -->
+            <h2 class="section-title">General</h2>
+            
+            <!-- Inventory Content -->
+            <div class="inventory-container">
+                
+                <!-- Page Title -->
+                <h1 class="inventory-main-title">Inventory</h1>
+                
+                <!-- Product Inventory Card -->
+                <div class="inventory-card">
+                    
+                    <!-- Product Name -->
+                    <div class="inventory-field">
+                        <label class="inventory-label">Product Name</label>
+                        <div class="inventory-value">Shin Ramen Bundle</div>
+                    </div>
+                    
+                    <!-- Available Stock -->
+                    <div class="inventory-field">
+                        <label class="inventory-label">Available Stock</label>
+                        <div class="inventory-value">25</div>
+                    </div>
+                    
+                    <!-- Reserved Stock -->
+                    <div class="inventory-field">
+                        <label class="inventory-label">Reserved Stock</label>
+                        <div class="inventory-value">12</div>
+                    </div>
+                    
+                    <!-- Stock Status -->
+                    <div class="inventory-field">
+                        <label class="inventory-label">Stock Status</label>
+                        <div class="inventory-value stock-status">
+                            <span class="status-dot active"></span>
+                            <span class="status-text">In Stock</span>
+                            <span class="status-dot inactive"></span>
+                            <span class="status-text">Low Stock</span>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- Additional Product (Optional - can be duplicated) -->
+                <div class="inventory-card">
+                    <div class="inventory-field">
+                        <label class="inventory-label">Product Name</label>
+                        <div class="inventory-value">Buldak Spicy Ramen</div>
+                    </div>
+                    <div class="inventory-field">
+                        <label class="inventory-label">Available Stock</label>
+                        <div class="inventory-value">18</div>
+                    </div>
+                    <div class="inventory-field">
+                        <label class="inventory-label">Reserved Stock</label>
+                        <div class="inventory-value">5</div>
+                    </div>
+                    <div class="inventory-field">
+                        <label class="inventory-label">Stock Status</label>
+                        <div class="inventory-value stock-status">
+                            <span class="status-dot active"></span>
+                            <span class="status-text">In Stock</span>
+                            <span class="status-dot inactive"></span>
+                            <span class="status-text">Low Stock</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="inventory-card">
+                    <div class="inventory-field">
+                        <label class="inventory-label">Product Name</label>
+                        <div class="inventory-value">Pepero Chocolate</div>
+                    </div>
+                    <div class="inventory-field">
+                        <label class="inventory-label">Available Stock</label>
+                        <div class="inventory-value">42</div>
+                    </div>
+                    <div class="inventory-field">
+                        <label class="inventory-label">Reserved Stock</label>
+                        <div class="inventory-value">8</div>
+                    </div>
+                    <div class="inventory-field">
+                        <label class="inventory-label">Stock Status</label>
+                        <div class="inventory-value stock-status">
+                            <span class="status-dot active"></span>
+                            <span class="status-text">In Stock</span>
+                            <span class="status-dot inactive"></span>
+                            <span class="status-text">Low Stock</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            
+        </main>
+    </div>
+</body>
+</html>

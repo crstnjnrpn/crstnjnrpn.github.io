@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="user.css">
+    <!-- Single JavaScript file that handles everything -->
+    <script src="cart-system.js"></script>
+    <script src="user-system.js"></script>
+    <title>Jangsu Korean Store - Products</title>
+</head>
+<body>
+
+    <!-- Navigation Bar (same as index.html) -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="KStore Logo">
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about-us.html">About Us</a>
+        </nav>
+
+        <div class="header-actions">
+            <!-- Cart Icon with Badge -->
+            <div class="cart-icon" id="cart-icon">
+                🛒
+                <span class="cart-badge" id="cart-badge">0</span>
+            </div>
+            
+            <!-- Profile Icon - Direct link to profile.html -->
+            <a href="user-profile.html" class="profile-icon-link">
+                <svg class="profile-svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z"/>
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- Category Filter Section -->
+    <section class="product-filter">
+        <!-- Container -->
+        <div class="filter-container">
+            <span class="filter-label">Category:</span>
+            
+            <!-- Dropdown container -->
+            <div class="category-dropdown-wrapper">
+                <select id="category" class="category-select">
+                    <option value="all">All Items</option>
+                    <option value="drinks">Drinks</option>
+                    <option value="noodles">Noodles</option>
+                    <option value="snacks">Snacks</option>
+                </select>
+                <!-- Dropdown arrow indicator -->
+                <span class="dropdown-arrow">▼</span>
+            </div>
+            
+            <!-- Optional: Add "Sort By"  -->
+            <div class="sort-wrapper">
+                <span class="sort-label">Sort By</span>
+                <span class="sort-arrow">▼</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid Section -->
+    <section class="products-section">
+        <div class="products-container" id="products-container">
+            <!-- Products will be dynamically loaded by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <a href="https://www.facebook.com/profile.php?id=61563538805687">Visit our Facebook Page</a>
+        <span class="separator">|</span>
+        <a href="#">Privacy Policy</a>
+        <span class="copyright">© 2026 Jangsu Korean Store</span>
+    </footer>
+
+    <!-- ===== CART SIDEBAR COMPONENT ===== -->
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Shopping Cart (<span id="cart-count">0</span>)</h2>
+            <button class="close-cart-btn" id="close-cart">×</button>
+        </div>
+        
+        <div class="cart-items-container" id="cart-items-container">
+            <!-- Empty Cart Message -->
+            <div class="empty-cart" id="empty-cart">
+                <div class="empty-cart-icon">🛒</div>
+                <p>Your cart is empty</p>
+                <p class="empty-cart-hint">Browse our products and add items to your cart</p>
+            </div>
+            
+            <!-- Cart Items List -->
+            <div class="cart-items-list" id="cart-items-list"></div>
+        </div>
+        
+        <!-- Cart Footer -->
+        <div class="cart-footer" id="cart-footer">
+            <div class="cart-total">
+                <span>Estimated Total:</span>
+                <span class="total-amount" id="cart-total">₱0.00</span>
+            </div>
+            <button class="view-order-btn" id="view-order-btn">View Order</button>
+        </div>
+    </div>
+    
+</body>
+</html>

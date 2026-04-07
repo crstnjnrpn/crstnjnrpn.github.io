@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="cart-sidebar.css">
+    <title>Jangsu Korean Store - Order Details</title>
+    
+     <!-- Single JavaScript file that handles everything -->
+    <script src="cart-system.js"></script>
+    <script src="user-system.js"></script>
+</head>
+<body>
+
+    <!-- Navigation Bar with Cart Badge -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="KStore Logo">
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about-us.html">About Us</a>
+        </nav>
+
+        <div class="header-actions">
+            <!-- Cart Icon with Badge -->
+            <div class="cart-icon" id="cart-icon">
+                🛒
+                <span class="cart-badge" id="cart-badge">0</span>
+            </div>
+            
+            <!-- Profile Icon - Direct link to profile.html -->
+            <a href="user-profile.html" class="profile-icon-link">
+                <svg class="profile-svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z"/>
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- Order Details Section -->
+    <section class="order-details-section">
+        
+        <!-- Top label with Back Button -->
+        <div class="order-banner">
+            <div class="order-banner-left">
+                <a href="products.html" class="back-to-products-btn">← Back to Products</a>
+            </div>
+            <div class="order-banner-right">
+                <span>Products</span> <span class="separator">/</span> <span class="current-page">Order</span>
+            </div>
+        </div>
+
+        <!-- Main order container with two columns: product image and details -->
+        <div class="order-container">
+            
+            <!-- LEFT COLUMN: Product Image -->
+            <div class="order-image-column">
+                <div class="product-image-frame">
+                    <img src="images/drinks.jpg" alt="Product Image" id="order-product-image">
+                </div>
+            </div>
+            
+            <!-- RIGHT COLUMN: Product Details -->
+            <div class="order-details-column">
+                <!-- Product title -->
+                <h1 class="order-product-title" id="order-product-title">Food</h1>
+                
+                <!-- Product description -->
+                <p class="order-product-description" id="order-product-description">
+                    Delicious and creamy milk drink, perfect for any time of the day.
+                </p>
+                
+                <!-- Price section -->
+                <div class="order-price-section">
+                    <span class="order-price-label">Price:</span>
+                    <span class="order-price-value" id="order-product-price">₱95.00</span>
+                </div>
+                
+                <!-- Quantity selector -->
+                <div class="order-quantity-section">
+                    <label for="quantity" class="quantity-label">Quantity:</label>
+                    <div class="quantity-controls">
+                        <button class="quantity-btn minus" id="decrease-btn">−</button>
+                        <input type="number" id="quantity" name="quantity" value="1" min="1" max="99" readonly>
+                        <button class="quantity-btn plus" id="increase-btn">+</button>
+                    </div>
+                </div>
+                
+                <!-- Action buttons -->
+                <div class="order-action-buttons">
+                    <button class="add-to-cart-btn" id="add-to-cart-btn">Add to Cart</button>
+                    <button class="buy-now-btn" id="buy-now-btn">Buy Now</button>
+                </div>
+                
+                <!-- Product meta information -->
+                <div class="order-meta-info">
+                    <p><span class="meta-label">Category:</span> <span id="order-product-category">Drinks</span></p>
+                    <p><span class="meta-label">Availability:</span> <span class="in-stock">In Stock</span></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Additional product info section -->
+        <div class="product-additional-info">
+            <h3>Product Details</h3>
+            <p id="order-product-full-desc">
+                This premium product is carefully selected to ensure the highest quality.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== CART SIDEBAR COMPONENT ===== -->
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Shopping Cart (<span id="cart-count">0</span>)</h2>
+            <button class="close-cart-btn" id="close-cart">×</button>
+        </div>
+        
+        <div class="cart-items-container" id="cart-items-container">
+            <!-- Empty Cart Message -->
+            <div class="empty-cart" id="empty-cart">
+                <div class="empty-cart-icon">🛒</div>
+                <p>Your cart is empty</p>
+                <p class="empty-cart-hint">Add items to get started</p>
+            </div>
+            
+            <!-- Cart Items List -->
+            <div class="cart-items-list" id="cart-items-list"></div>
+        </div>
+        
+        <!-- Cart Footer -->
+        <div class="cart-footer" id="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-amount" id="cart-total">₱0.00</span>
+            </div>
+            <button class="view-order-btn" id="view-order-btn">View Order</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <a href="#">Contact Us</a>
+        <span class="separator">|</span>
+        <a href="#">Privacy Policy</a>
+        <span class="copyright">© 2026 Jangsu Korean Store</span>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="user.css">
+    <title>Jangsu Korean Store - Order Details</title>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="KStore Logo">
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about-us.html">About Us</a>
+        </nav>
+
+        <div class="header-actions">
+            <!-- Cart Icon with Badge -->
+            <div class="cart-icon" id="cart-icon">
+                🛒
+                <span class="cart-badge" id="cart-badge">0</span>
+            </div>
+            
+            <!-- Profile Icon - Direct link to profile.html -->
+            <a href="user-profile.html" class="profile-icon-link">
+                <svg class="profile-svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z"/>
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- ORDER DETAILS PAGE CONTENT -->
+    <main class="order-detail-container">
+        
+        <!-- Main Title -->
+        <h1 class="page-title">Customer Order Details</h1>
+        
+        <!-- Decorative divider line under breadcrumb -->
+        <hr class="title-divider">
+        
+        <!-- Section Title -->
+        <h2 class="section-title">Customer Order Details</h2>
+        
+        <!-- Order Reference -->
+        <div class="order-reference">
+            <p><strong>Order Reference:</strong> #123456</p>
+        </div>
+        
+        <!-- Product List Table -->
+        <div class="product-list-section">
+            <h3 class="table-heading">Product List</h3>
+            
+            <table class="order-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Quantity</th>
+                        <th>Unit Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Shin Ramen Bundle</td>
+                        <td>3</td>
+                        <td>₱420.00</td>
+                    </tr>
+                    <tr>
+                        <td>Buldak</td>
+                        <td>4</td>
+                        <td>₱396.00</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <!-- Total Price -->
+            <div class="total-price-row">
+                <span class="total-label"><strong>Total Price:</strong></span>
+                <span class="total-value"><strong>₱816</strong></span>
+            </div>
+        </div>
+        
+        <!-- Divider line -->
+        <hr class="section-divider">
+        
+        <!-- Order Details Section -->
+        <div class="order-details-info">
+            <div class="info-row">
+                <span class="info-label"><strong>Pickup Date & Time:</strong></span>
+                <span class="info-value">February 28, 2026 | 10:17 AM</span>
+            </div>
+            
+            <div class="info-row">
+                <span class="info-label"><strong>Payment Method:</strong></span>
+                <span class="info-value">Cash On Delivery</span>
+            </div>
+            
+            <div class="info-row">
+                <span class="info-label"><strong>Current Status:</strong></span>
+                <span class="info-value status-ready">Ready For Pickup</span>
+            </div>
+        </div>
+        
+        <!-- Update Order Button -->
+        <div class="update-button-container">
+            <button class="update-order-btn">[Update Order]</button>
+        </div>
+        
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <a href="https://www.facebook.com/profile.php?id=61563538805687">Visit our Facebook Page</a>
+        <span class="separator">|</span>
+        <a href="#">Privacy Policy</a>
+        <span class="copyright">© 2026 KStore</span>
+    </footer>
+
+</body>
+</html>

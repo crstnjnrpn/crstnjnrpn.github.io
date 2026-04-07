@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <title>Jangsu Korean Store - Order Overview</title>
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Admin Dashboard</h2>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <!-- General Section -->
+                <div class="nav-section">
+                    <div class="nav-section-title">General</div>
+                    <!-- Dashboard link -->
+                    <a href="admin-dashboard.html" class="nav-item">Dashboard</a>
+                    <!-- Orders link -->
+                    <a href="admin-order.html" class="nav-item">Orders</a>
+                    <!-- Products link -->
+                    <a href="admin-product.html" class="nav-item"> Products</a>
+                    <!-- Inventory link -->
+                    <a href="admin-inventory.html" class="nav-item">Inventory</a>
+                    <!-- Reports link -->
+                    <a href="admin-report.html" class="nav-item">Reports</a>
+                </div>
+                <!-- Settings Section -->
+                <div class="nav-section">
+                    <a href="admin-setting.html" class="nav-item activ">
+                        <span class="nav-icon">⚙️</span> Settings
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- ===== MAIN CONTENT AREA ===== -->
+        <main class="main-content">
+            
+            
+            <!-- Back to List Button -->
+            <div class="back-to-list">
+                <a href="admin-order.html" class="back-link">
+                    <span class="back-icon">←</span> Back to List
+                </a>
+            </div>
+            
+            <!-- Main Content Area Title -->
+            <h2 class="section-title">General</h2>
+            
+            <!-- Order Overview Container -->
+            <div class="order-overview-container">
+                
+                <!-- Customer Information Section -->
+                <div class="info-section">
+                    <h3 class="section-heading">Customer Information</h3>
+                    <div class="info-grid">
+                        <div class="info-row">
+                            <span class="info-label">Name:</span>
+                            <span class="info-value">John Doe</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Email:</span>
+                            <span class="info-value">johndoe@gmail.com</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Contact #:</span>
+                            <span class="info-value">0999123455</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product List Section -->
+                <div class="product-section">
+                    <h3 class="section-heading">Product List</h3>
+                    
+                    <div class="product-table-container">
+                        <!-- Table Header -->
+                        <div class="table-header">
+                            <div class="table-row header-row">
+                                <div class="table-cell product-name">Name</div>
+                                <div class="table-cell product-qty">Quantity</div>
+                                <div class="table-cell product-price">Unit Price</div>
+                            </div>
+                        </div>
+                        
+                        <!-- Table Body -->
+                        <div class="table-body">
+                            <!-- Product Row 1 -->
+                            <div class="table-row data-row">
+                                <div class="table-cell product-name">Shin Ramen Bundle</div>
+                                <div class="table-cell product-qty">3</div>
+                                <div class="table-cell product-price">₱420.00</div>
+                            </div>
+                            
+                            <!-- Product Row 2 (additional product) -->
+                            <div class="table-row data-row">
+                                <div class="table-cell product-name">Buldak</div>
+                                <div class="table-cell product-qty">2</div>
+                                <div class="table-cell product-price">₱198.00</div>
+                            </div>
+                            
+                            <!-- Product Row 3 (additional product) -->
+                            <div class="table-row data-row">
+                                <div class="table-cell product-name">Pepero</div>
+                                <div class="table-cell product-qty">1</div>
+                                <div class="table-cell product-price">₱85.00</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Pickup & Payment Section -->
+                <div class="pickup-payment-section">
+                    <h3 class="section-heading">Pickup & Payment</h3>
+                    
+                    <div class="info-grid two-column">
+                        <div class="info-row">
+                            <span class="info-label">Date:</span>
+                            <span class="info-value">2026-01-01</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Time:</span>
+                            <span class="info-value">00:00</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Payment Method:</span>
+                            <span class="info-value">Cash</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Transaction ID:</span>
+                            <span class="info-value">0000001234</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Divider -->
+                <hr class="section-divider">
+                
+                <!-- Total Section -->
+                <div class="total-section">
+                    <div class="total-row">
+                        <span class="total-label">Total:</span>
+                        <span class="total-value">₱ 1,260.00</span>
+                    </div>
+                </div>
+                
+                <!-- Divider -->
+                <hr class="section-divider">
+                
+                <!-- Action Buttons Section -->
+                <div class="action-buttons">
+                    <button class="action-btn confirm-btn">Confirm Order</button>
+                    <button class="action-btn ready-btn">Mark as Ready For Pickup</button>
+                    <button class="action-btn complete-btn">Complete Order</button>
+                    <button class="action-btn cancel-btn">Cancel Order</button>
+                </div>
+                
+            </div>
+            
+        </main>
+    </div>
+
+    <!-- Simple JavaScript for button actions -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all action buttons
+            const confirmBtn = document.querySelector('.confirm-btn');
+            const readyBtn = document.querySelector('.ready-btn');
+            const completeBtn = document.querySelector('.complete-btn');
+            const cancelBtn = document.querySelector('.cancel-btn');
+            
+            // Add click handlers
+            if (confirmBtn) {
+                confirmBtn.addEventListener('click', function() {
+                    alert('Order #200123 has been confirmed!');
+                    this.style.backgroundColor = '#27ae60';
+                    this.textContent = '✓ Confirmed';
+                });
+            }
+            
+            if (readyBtn) {
+                readyBtn.addEventListener('click', function() {
+                    alert('Order #200123 is now marked as Ready For Pickup!');
+                    this.style.backgroundColor = '#f39c12';
+                    this.textContent = '✓ Ready For Pickup';
+                });
+            }
+            
+            if (completeBtn) {
+                completeBtn.addEventListener('click', function() {
+                    alert('Order #200123 has been completed!');
+                    this.style.backgroundColor = '#2ecc71';
+                    this.textContent = '✓ Completed';
+                });
+            }
+            
+            if (cancelBtn) {
+                cancelBtn.addEventListener('click', function() {
+                    if(confirm('Are you sure you want to cancel this order?')) {
+                        alert('Order #200123 has been cancelled.');
+                        this.style.backgroundColor = '#e74c3c';
+                        this.textContent = '✗ Cancelled';
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

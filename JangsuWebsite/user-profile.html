@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="user.css">
+    <script src="cart-system.js"></script>
+    <script src="user-system.js"></script>
+    <title>Jangsu Korean Store - My Account</title>
+</head>
+<body>
+
+    <!-- Navigation Bar with Profile Icon -->
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="KStore Logo">
+        </div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="about-us.html">About Us</a>
+        </nav>
+
+        <div class="header-actions">
+            <!-- Cart Icon with Badge -->
+            <div class="cart-icon" id="cart-icon">
+                🛒
+                <span class="cart-badge" id="cart-badge">0</span>
+            </div>
+            
+            <!-- Profile Icon -->
+            <a href="user-profile.html" class="profile-icon-link">
+                <svg class="profile-svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z"/>
+                </svg>
+            </a>
+        </div>
+    </header>
+
+    <!-- Profile Page Content -->
+    <main class="profile-page">
+        <div class="profile-container-page">
+            
+            <!-- Page Title -->
+            <h1 class="profile-title">Account</h1>
+            
+            <!-- Profile Tabs -->
+            <div class="profile-tabs">
+                <button class="tab-btn active" data-tab="profile">Profile Details</button>
+                <button class="tab-btn" data-tab="orders">My Orders</button>
+            </div>
+            
+            <!-- Profile Details Tab -->
+            <div id="profile-tab" class="tab-content active">
+                <div class="profile-content">
+                    
+                    <!-- Profile Header -->
+                    <div class="profile-header">
+                        <div class="profile-avatar-large">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z"/>
+                            </svg>
+                        </div>
+                        <div class="profile-avatar-info">
+                            <p class="change-photo">Change Photo</p>
+                            <p class="photo-hint">JPG, PNG, GIF (max 5MB)</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Profile Info Form -->
+                    <div class="profile-info-section">
+                        <div class="info-group">
+                            <label class="info-label">Full Name</label>
+                            <div class="info-value" id="profile-name">hello</div>
+                        </div>
+                        
+                        <div class="info-group">
+                            <label class="info-label">Email Address</label>
+                            <div class="info-value" id="profile-email">hello@example.com</div>
+                        </div>
+                        
+                        <div class="info-group">
+                            <label class="info-label">Phone Number</label>
+                            <div class="info-value" id="profile-phone">+1 (555) 123-4567</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Edit Details Button -->
+                    <button class="edit-details-btn" id="edit-details-btn">Edit Details</button>
+                    
+                    <!-- Security Section -->
+                    <div class="security-section">
+                        <h3 class="security-title">Security</h3>
+                        <button class="change-password-btn">Change Password</button>
+                    </div>
+                    
+                    <!-- Logout Button -->
+                    <div id="profile-logout-btn">
+                        <div class="logout-section">
+                            <button class="logout-btn" id="profile-logout-btn">Logout</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <!-- My Orders Tab -->
+            <div id="orders-tab" class="tab-content">
+                <div class="orders-content">
+                    
+                    <!-- Search Bar -->
+                    <div class="orders-search">
+                        <input type="text" id="order-search" placeholder="Search Order..." class="search-input">
+                        <button class="search-btn">🔍</button>
+                    </div>
+                    
+                    <!-- Orders Table -->
+                    <div class="orders-table-container">
+                        <table class="orders-table">
+                            <thead>
+                                <tr>
+                                    <th>Order Reference</th>
+                                    <th>Order Placed</th>
+                                    <th>Pickup Schedule</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody id="orders-table-body">
+                                <!-- Orders will be dynamically inserted here -->
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- Filter and New Order -->
+                    <div class="orders-footer">
+                        <div class="filter-section">
+                            <label>Filter:</label>
+                            <select id="order-filter" class="filter-select">
+                                <option value="all">All Orders</option>
+                                <option value="pending">Pending</option>
+                                <option value="confirmed">Confirmed</option>
+                                <option value="ready">Ready For Pickup</option>
+                                <option value="completed">Completed</option>
+                                <option value="cancelled">Cancelled</option>
+                            </select>
+                        </div>
+                        <a href="products.html" class="new-order-btn">+ New Order</a>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- Cart Sidebar Component -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Shopping Cart (<span id="cart-count">0</span>)</h2>
+            <button class="close-cart-btn" id="close-cart">×</button>
+        </div>
+        <div class="cart-items-container" id="cart-items-container">
+            <div class="empty-cart" id="empty-cart">
+                <div class="empty-cart-icon">🛒</div>
+                <p>Your cart is empty</p>
+                <p class="empty-cart-hint">Add items to get started</p>
+            </div>
+            <div class="cart-items-list" id="cart-items-list"></div>
+        </div>
+        <div class="cart-footer" id="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span class="total-amount" id="cart-total">₱0.00</span>
+            </div>
+            <button class="view-order-btn" id="view-order-btn">View Order</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <a href="#">Contact Us</a>
+        <span class="separator">|</span>
+        <a href="#">Privacy Policy</a>
+        <span class="copyright">© 2026 Jangsu Korean Store</span>
+    </footer>
+
+    
+</body>
+</html>
